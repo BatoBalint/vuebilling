@@ -11,34 +11,10 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body class="bg-dark text-light">
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-md-8 mx-auto">
-          <div id="tablazat">
-            <table class="table text-light">
-              <tr>
-                <th>Nev</th>
-                <th>Ar</th>
-                <th>Mennyiseg</th>
-                <th>Operations</th>
-              </tr>
-              <tr v-for="item in rows">
-                <td>{{ item.title }}</td>
-                <td>{{ item.price }}</td>
-                <td>{{ item.quantity }}</td>
-                <td></td>
-              </tr>
-                <tr>
-                  <td><input v-model="nameInput" type="text" placeholder="Nev"></td>
-                  <td><input v-model="priceInput" type="text" placeholder="Ar"></td>
-                  <td><input v-model="qtyInput" type="text" placeholder="Mennyiseg"></td>
-                  <td><input type="submit" value="Add" v-on:click="add"></td>
-                </tr>
-            </table>
-          </div>
-        </div>
-      </div>
+
+    <div id="app">
+      
     </div>
+
   </body>
-  <script src="script.js" charset="utf-8"></script>
 </html>

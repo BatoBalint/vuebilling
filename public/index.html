@@ -20,12 +20,20 @@
                 <th>Nev</th>
                 <th>Ar</th>
                 <th>Mennyiseg</th>
+                <th>Operations</th>
               </tr>
               <tr v-for="item in rows">
                 <td>{{ item.title }}</td>
                 <td>{{ item.price }}</td>
                 <td>{{ item.quantity }}</td>
+                <td></td>
               </tr>
+                <tr>
+                  <td><input v-model="nameInput" type="text" placeholder="Nev"></td>
+                  <td><input v-model="priceInput" type="text" placeholder="Ar"></td>
+                  <td><input v-model="qtyInput" type="text" placeholder="Mennyiseg"></td>
+                  <td><input type="submit" value="Add" v-on:click="add"></td>
+                </tr>
             </table>
           </div>
         </div>

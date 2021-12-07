@@ -1,7 +1,6 @@
 let app = new Vue({
     el: '#tablazat',
     data: {
-      message: "Kacsa",
       rows: [
         {
           title: 'Kerék',
@@ -23,6 +22,26 @@ let app = new Vue({
           price: 45120,
           quantity: 321
         },
-      ]
+      ],
+      nameInput: "",
+      priceInput: "",
+      qtyInput: ""
+    },
+    methods: {
+        add: function () {
+            if (this.nameInput !== "" && this.priceInput !== "" && this.qtyInput !== "") {
+                var newLine = {
+                    title: this.nameInput,
+                    price: this.priceInput,
+                    quantity: this.qtyInput
+                };
+                this.rows.push(newLine);
+                this.nameInput = "";
+                this.priceInput = "";
+                this.qtyInput = "";
+            } else {
+                alert("Egyik mezo sem maradthat ures");
+            }
+          }
     }
   })

@@ -4,14 +4,33 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+  <body class="bg-dark text-light">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-8 mx-auto">
+          <div id="tablazat">
+            <table class="table text-light">
+              <tr>
+                <th>Nev</th>
+                <th>Ar</th>
+                <th>Mennyiseg</th>
+              </tr>
+              <tr v-for="item in rows">
+                <td>{{ item.title }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.quantity }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="script.js" charset="utf-8"></script>
 </html>

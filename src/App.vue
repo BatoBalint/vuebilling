@@ -9,12 +9,14 @@
                 <th>Nev</th>
                 <th>Ar</th>
                 <th>Mennyiseg</th>
+                <th>Összérték</th>
                 <th>Operations</th>
               </tr>
               <tr v-for="item in rows" v-bind:key="item.title">
                 <td>{{ item.title }}</td>
                 <td>{{ item.price }}</td>
                 <td>{{ item.quantity }}</td>
+                <td>{{ item.price * item.quantity }}</td>
                 <td>
                   <button class="btn btn-danger bg-danger" v-on:click="deleteElem(item.title)">X</button>
                   <button class="btn btn-warning bg-warning" v-on:click="editElem">Edit</button>
@@ -25,6 +27,7 @@
                   <td><input class="form-control text-light bg-dark" type="number" placeholder="Ar" v-model="priceInput"></td>
                   <td><input class="form-control text-light bg-dark" type="number" placeholder="Mennyiseg" v-model="qtyInput"></td>
                   <td><input class="btn btn-success" type="submit" value="Add" v-on:click="add"></td>
+                  <td></td>
                 </tr>
             </table>
           </div>
@@ -105,4 +108,8 @@ export default {
   button {
     margin-right: 10px;
   }
+  td, th {
+    white-space: nowrap !important;
+    width: 1% !important;
+}
 </style>

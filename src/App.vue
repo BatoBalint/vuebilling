@@ -62,7 +62,7 @@ export default {
       }
     },
     editElem() {
-      alert("test");
+      alert("not implemented yet");
     }
   },
   data() {

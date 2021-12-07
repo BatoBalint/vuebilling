@@ -22,8 +22,8 @@
               </tr>
                 <tr>
                   <td><input class="form-control text-light bg-dark" type="text" placeholder="Nev" v-model="nameInput"></td>
-                  <td><input class="form-control text-light bg-dark" type="text" placeholder="Ar" v-model="priceInput"></td>
-                  <td><input class="form-control text-light bg-dark" type="text" placeholder="Mennyiseg" v-model="qtyInput"></td>
+                  <td><input class="form-control text-light bg-dark" type="number" placeholder="Ar" v-model="priceInput"></td>
+                  <td><input class="form-control text-light bg-dark" type="number" placeholder="Mennyiseg" v-model="qtyInput"></td>
                   <td><input class="btn btn-success" type="submit" value="Add" v-on:click="add"></td>
                 </tr>
             </table>
@@ -100,6 +100,7 @@ export default {
 <style>
   tr {
     margin: 10px 0;
+    padding: 5px 0;
   }
   button {
     margin-right: 10px;

@@ -1,4 +1,4 @@
-# [Név]
+# Bató Bálint
 
 ## Hogyan kezdj neki?
 
